@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<header>
+<title>My CIS-92 Project</title>
+</headder>
+<body>
+<h1>{{ host }}</h1>
+<strong>A project by {{ user }}</strong>
+<p><a href="polls/">Goto Polls</a></p>
+<p><a href="admin/">Goto Admin</a></p>
+<h2>Network Interfaces:</h2>
+<pre>{% for iface, data in net_if_addrs.items %}
+{{ iface }}
+  {% for addrfam in data %}{{ addrfam.address }}
+  {% endfor %} 
+{% endfor %}</pre>
+<h2>CPU Load Average:</h2>
+<pre>{{ loadavg }}</pre>
+<h2>Disk Usage</h2>
+<pre>Total: {{ disk_usage.total | floatformat:"0g" }} Used: {{ disk_usage.used | floatformat:"0g" }} {{ disk_usage.percent }}%</pre>
+</body>
+</html>
