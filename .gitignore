@@ -4,4 +4,6 @@
 # Ignore Python virtual environments of different names
 .venv/
 venv/
-
+venv*/ 
+*.pyc
+*.sqlite3

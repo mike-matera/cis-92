@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysite-config
+data:
+    PORT: "8080"
+    STUDENT_NAME: "Boris Jocoy"
+    SITE_NAME: "www.borisjocoy.com"
+    DATA_DIR: "/data"
+    DEBUG: "1"
